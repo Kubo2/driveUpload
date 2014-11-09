@@ -1,0 +1,15 @@
+<!doctype html>
+<meta charset='utf-8'>
+<script src='scripts/simulation.js'></script>
+<!--script src='scripts/drive-picker.js'></script-->
+<script>
+	var x = new XMLHttpRequest();
+	x.open('POST', 'gapi-picker-data.json');
+	x.onload = function() 
+	{
+		if(x.status != 200) return;
+		var data = JSON.parse(x.responseText);
+		window.driveUpload.init(data.developerKey, data.clientId, data.pickerScope);
+	}
+	x.send(null);
+</script>
