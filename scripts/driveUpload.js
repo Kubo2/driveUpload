@@ -1,6 +1,6 @@
 
 /**
- * This file is part of Kunštár's WEB-UI for his students.
+ * This file is designed to be a part of Kunštár's WEB-UI for his students.
  */
 /**
  * This file contains JavaScript integration with Google Drive Picker API
