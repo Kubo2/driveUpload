@@ -179,8 +179,9 @@
 			 * @param {Array} mimes An array-list of mime types
 			 */
 			setMimes: function(mimes) {
-				if(pickerDialog && !pickerDialog.isVisible()) {
-					allowedMedia = mimes.join(',');
+				if(!pickerDialog || !pickerDialog.isVisible()) {
+					if(mimes.length)
+						allowedMedia = mimes.join(',');
 				}
 			},
 
